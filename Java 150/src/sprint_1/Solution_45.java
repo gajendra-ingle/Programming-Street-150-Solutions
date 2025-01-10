@@ -11,4 +11,28 @@ package sprint_1;
 
 public class Solution_45 {
 
+	public static void main(String[] args) {
+		int[] arr = { 1, 2, 2, 3, 4, 4, 4 };
+		System.out.println(mostFrequentNumber(arr));
+	}
+
+	public static int mostFrequentNumber(int[] array) {
+		int mostFrequent = array[0];
+		int maxCount = 0;
+
+		for (int i = 0; i < array.length; i++) {
+			int count = 0;
+			for (int j = 0; j < array.length; j++) {
+				if (array[i] == array[j]) {
+					count++;
+				}
+			}
+
+			if (count > maxCount) {
+				mostFrequent = array[i];
+				maxCount = count;
+			}
+		}
+		return mostFrequent;
+	}
 }

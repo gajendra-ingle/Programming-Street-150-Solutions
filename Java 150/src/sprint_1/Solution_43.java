@@ -11,4 +11,19 @@ package sprint_1;
 
 public class Solution_43 {
 
+	public static void main(String[] args) {
+		int number = 12;
+
+		System.out.println("Divisors of " + number + ":");
+		printDivisors(number);
+	}
+
+	public static void printDivisors(int number) {
+		for (int i = 1; i <= number; i++) {
+			if (number % i == 0) {
+				System.out.print(i + " ");
+			}
+		}
+	}
+
 }
