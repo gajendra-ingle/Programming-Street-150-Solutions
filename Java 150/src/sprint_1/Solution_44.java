@@ -11,4 +11,18 @@ package sprint_1;
 
 public class Solution_44 {
 
+	public static void main(String[] args) {
+
+		int[] arr = { 1, 2, 3, 4, 5 };
+
+		System.out.println(calculateTheAverage(arr));
+	}
+
+	static int calculateTheAverage(int[] arr) {
+		int sum = 0;
+		for (int val : arr) {
+			sum += val;
+		}
+		return sum / arr.length;
+	}
 }
