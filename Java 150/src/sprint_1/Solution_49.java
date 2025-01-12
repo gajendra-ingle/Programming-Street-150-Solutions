@@ -11,4 +11,23 @@ package sprint_1;
 
 public class Solution_49 {
 
+	public static void main(String[] args) {
+		int[] arr = {10, 20, 4, 45, 99};
+		System.out.println(findSecondMax(arr));
+	}
+
+	public static int findSecondMax(int[] nums) {
+		int max = 0;
+		int secondMax = 0;
+
+		for (int num : nums) {
+			if (num > max) {
+				secondMax = max;
+				max = num;
+			} else if (num > secondMax && num < max) {
+				secondMax = num;
+			}
+		}
+		return secondMax;
+	}
 }
